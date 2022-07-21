@@ -1,0 +1,94 @@
+\documentclass{cernatsnote}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{placeins}
+\usepackage{titlesec}
+\usepackage{subfigure}
+\usepackage{float}
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}    %
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+
+
+%%%%%%%%%%%%%%%% TITLE PAGE %%%%%%%%%%%%%%%% 
+    \title{CHIMERA: status report}
+    \author{
+    	To be completed \; \\		
+    	CERN, CH-1211 Geneva, Switzerland
+    }
+    \email{ruben.garcia.alia@cern.ch}
+    \date{01.09.2022}
+    \keywords{}
+    \begin{document}
+    \maketitle
+    
+    \begin{abstract}
+        To be written...
+    \end{abstract}
+%%%%%%%%%%%%%%%% TITLE PAGE END %%%%%%%%%%%% 
+
+    \begingroup
+    \color{black}
+    \pagebreak
+    \tableofcontents
+    \endgroup
+
+\pagebreak
+
+% Ruben
+\section{Introduction and motivation}
+    \input{sections/introduction_and_motivation}
+    \pagebreak
+
+
+\section{2021 run summary}
+    
+    % Matt, Eliott, Pablo
+    \subsection{Beam Physics Aspects}
+        \input{sections/beam_physics}
+    \pagebreak
+        
+    \subsection{Beam Instrumentation}
+        % Kacper
+        \input{sections/beam_instrumentation_intensity}
+        
+        % Daniel, Natalia
+        \input{sections/beam_instrumentation_spatial_profile}
+        
+        % Kacper, Natalia
+        \input{sections/beam_instrumentation_time_profile}
+    \pagebreak
+        
+\section{Status of studies and 2022 outlook}
+
+    %Matt, Eliott, Pablo
+    \subsection{Considerations and plans on intensity tuning}
+        \input{sections/outlook_intensity_tuning}
+    
+    %Matt, Eliott, Pablo
+    \subsection{Considerations and plans on energy tuning}
+        \input{sections/outlook_energy_tuning}   
+    
+    %R2E
+    \subsection{Beam instrumentation: exploitation of available instruments, and integration of new instruments}
+        \input{sections/outlook_beam_instrumentation} 
+    
+    %Matt, Eliott, Pablo
+    \subsection{Short summary of optics studies}
+        \input{sections/status_optics_studies} 
+
+    %Andreas
+    \subsection{Short summary of FLUKA studies}
+        \input{sections/status_FLUKA_studies} 
+        
+    \pagebreak
+    
+\bibliography{references}
+\bibliographystyle{plain}
+
+\end{document}
